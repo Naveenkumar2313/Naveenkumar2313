@@ -10,12 +10,14 @@
       --text: #ECEEF1;
       --border: #262B33;
       --link: #F5A524;
+      --code-bg: #1A1E24;
     }
     body.light {
       --bg: #F5F3EE;
       --text: #13161B;
       --border: #D8D3C8;
       --link: #B45309;
+      --code-bg: #ECE9E1;
     }
     body {
       margin: 0;
@@ -41,7 +43,6 @@
       border-collapse: collapse;
       margin: 20px 0;
       font-size: 13px;
-      font-family: monospace;
     }
     th, td {
       border: 1px solid var(--border);
@@ -50,6 +51,9 @@
     }
     th {
       background: rgba(255, 255, 255, 0.04);
+    }
+    body.light th {
+      background: rgba(0, 0, 0, 0.04);
     }
     a {
       color: var(--link);
@@ -60,86 +64,101 @@
       border-top: 1px solid var(--border);
       margin: 32px 0;
     }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
   </style>
 </head>
 <body class="dark">
   <script>
     const params = new URLSearchParams(window.location.search);
-    if (params.get('theme') === 'light') {
+    const isLight = params.get('theme') === 'light';
+    if (isLight) {
       document.body.className = 'light';
     }
+    const suffix = isLight ? '-light.svg?v=3' : '-dark.svg?v=3';
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("img[data-asset]").forEach(img => {
+        img.src = `../assets/${img.dataset.asset}${suffix}`;
+      });
+    });
   </script>
 
   <div class="markdown-body">
-    <!-- Hero -->
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="../assets/hero-dark.svg?v=1">
-      <source media="(prefers-color-scheme: light)" srcset="../assets/hero-light.svg?v=1">
-      <img alt="Naveen Kumar K Hero" src="../assets/hero-dark.svg?v=1">
-    </picture>
+    <!-- Hero Instrument Panel (Option 2) -->
+    <img data-asset="hero" alt="Naveen Kumar K Hero">
 
-    <!-- Signal Path -->
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="../assets/path-dark.svg?v=1">
-      <source media="(prefers-color-scheme: light)" srcset="../assets/path-light.svg?v=1">
-      <img alt="Signal Path" src="../assets/path-dark.svg?v=1">
-    </picture>
+    <!-- 01: Signal Path -->
+    <img data-asset="path" alt="Signal Path">
 
-    <!-- Selected Work -->
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="../assets/work-dark.svg?v=1">
-      <source media="(prefers-color-scheme: light)" srcset="../assets/work-light.svg?v=1">
-      <img alt="Selected Work" src="../assets/work-dark.svg?v=1">
-    </picture>
+    <!-- 02: Selected Work -->
+    <img data-asset="work" alt="Selected Work">
 
-    <!-- BOM -->
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="../assets/bom-dark.svg?v=1">
-      <source media="(prefers-color-scheme: light)" srcset="../assets/bom-light.svg?v=1">
-      <img alt="Bill of Materials" src="../assets/bom-dark.svg?v=1">
-    </picture>
-
-    <!-- Activity Trace -->
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="../assets/activity-dark.svg?v=1">
-      <source media="(prefers-color-scheme: light)" srcset="../assets/activity-light.svg?v=1">
-      <img alt="Live Activity Trace" src="../assets/activity-dark.svg?v=1">
-    </picture>
-
-    <!-- Connect -->
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="../assets/connect-dark.svg?v=1">
-      <source media="(prefers-color-scheme: light)" srcset="../assets/connect-light.svg?v=1">
-      <img alt="Connect Terminal" src="../assets/connect-dark.svg?v=1">
-    </picture>
-
-    <hr>
-
-    <h3>Verified Channels</h3>
+    <h3>Selected Systems Architecture</h3>
     <table>
       <thead>
         <tr>
-          <th>Channel</th>
-          <th>Endpoint</th>
-          <th>Direct Link</th>
+          <th style="width: 50px;">IC</th>
+          <th style="width: 220px;">System</th>
+          <th>Architecture &amp; Implementation</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>GitHub</strong></td>
-          <td><code>github.com/Naveenkumar2313</code></td>
-          <td><a href="https://github.com/Naveenkumar2313">github.com/Naveenkumar2313</a></td>
+          <td><strong>U1</strong></td>
+          <td><strong>Circuit Simulator</strong></td>
+          <td>Interactive browser electronics lab with Modified Nodal Analysis (MNA) solver engine and real-time collaboration. Built with React, Django, Konva, and Zustand.</td>
         </tr>
         <tr>
-          <td><strong>LinkedIn</strong></td>
-          <td><code>linkedin.com/in/naveen-kumar-k-426a4a294</code></td>
-          <td><a href="https://www.linkedin.com/in/naveen-kumar-k-426a4a294/">linkedin.com/in/naveen-kumar-k</a></td>
+          <td><strong>U2</strong></td>
+          <td><strong>Arduino UNO Simulator</strong></td>
+          <td>Browser-based embedded emulation executing Arduino UNO binaries via AVR8js runtime.</td>
+        </tr>
+        <tr>
+          <td><strong>U3</strong></td>
+          <td><strong>ESP32 IoT RC Car</strong></td>
+          <td>IoT remote-controlled vehicle platform engineered with ESP32 and C++.</td>
+        </tr>
+        <tr>
+          <td><strong>U4</strong></td>
+          <td><strong>Personal Humanoid Robot</strong></td>
+          <td>Custom personal humanoid robotics platform integrated and controlled with Arduino and Python.</td>
+        </tr>
+        <tr>
+          <td><strong>U5</strong></td>
+          <td><strong>Codorythm</strong></td>
+          <td>Interactive platform for data structures and algorithm tracing.</td>
+        </tr>
+        <tr>
+          <td><strong>U6</strong></td>
+          <td><strong>Virtual Labs</strong></td>
+          <td>Zero-install simulation platform delivering virtual laboratories for engineering students.</td>
         </tr>
       </tbody>
     </table>
 
+    <!-- 03: Bill of Materials -->
+    <img data-asset="bom" alt="Bill of Materials">
+
+    <!-- 04: Live Activity Trace -->
+    <img data-asset="activity" alt="Live Activity Trace">
+
+    <!-- 05: Connect Terminal -->
+    <img data-asset="connect" alt="Connect Terminal">
+
+    <hr>
+
+    <h3>Links</h3>
+    <ul>
+      <li><strong>GitHub:</strong> <a href="https://github.com/Naveenkumar2313">https://github.com/Naveenkumar2313</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/naveen-kumar-k-426a4a294/">https://www.linkedin.com/in/naveen-kumar-k-426a4a294/</a></li>
+    </ul>
+
     <div style="text-align: center; color: #8D95A1; font-size: 11px; margin-top: 24px;">
-      Precision-built with Project SIGNAL pipeline · Last updated 2026-11-15 UTC
+      Last updated 2026-11-15 UTC
     </div>
   </div>
 </body>
