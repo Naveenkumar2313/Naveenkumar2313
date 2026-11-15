@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="490" viewBox="0 0 1200 490" role="img" aria-labelledby="title desc">
+<title id="title">stack.svg</title><desc id="desc">Naveen’s development toolkit across programming languages, frontend, backend, infrastructure and embedded hardware.</desc><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1224"/><stop offset="1" stop-color="#151b34"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+<linearGradient id="coral" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fb7185"/><stop offset="1" stop-color="#f97316"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="22"/></filter>
+</defs>
+<style>
+ text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+ .muted{fill:#aab5ce}.white{fill:#f8fafc}.blueText{fill:#93c5fd}.coralText{fill:#fda4af}
+ .eyebrow{font-size:16px;font-weight:700;letter-spacing:3px}.heading{font-size:42px;font-weight:750;letter-spacing:-1.2px}.body{font-size:20px}.small{font-size:15px}
+ .panel{fill:#ffffff;fill-opacity:.045;stroke:#9db5e8;stroke-opacity:.18;stroke-width:1.4}
+ .float{animation:float 6s ease-in-out infinite}.float2{animation:float 7s ease-in-out infinite reverse}
+ .pulse{animation:pulse 4s ease-in-out infinite;transform-origin:center}
+ @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+ @keyframes pulse{0%,100%{opacity:.45}50%{opacity:.9}}
+ @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="1200" height="490" rx="30" fill="url(#bg)"/>
+<circle cx="1060" cy="80" r="190" fill="#2563eb" opacity=".18" filter="url(#glow)"/>
+<circle cx="80" cy="470" r="150" fill="#f97366" opacity=".10" filter="url(#glow)"/>
+<text x="70" y="78" class="eyebrow blueText">02 / TOOLKIT</text><text x="70" y="136" class="heading white">Tools I build with</text>
+<g font-size="20" font-weight="650">
+<rect x="70" y="180" width="330" height="112" rx="18" class="panel"/><text x="96" y="218" class="coralText">LANGUAGES</text><text x="96" y="258" class="white">Python · JavaScript · TypeScript</text>
+<rect x="435" y="180" width="330" height="112" rx="18" class="panel"/><text x="461" y="218" class="blueText">FRONTEND</text><text x="461" y="258" class="white">React · Next.js · Vite</text>
+<rect x="800" y="180" width="330" height="112" rx="18" class="panel"/><text x="826" y="218" class="coralText">BACKEND</text><text x="826" y="258" class="white">Django REST · APIs · Python</text>
+<rect x="70" y="320" width="330" height="112" rx="18" class="panel"/><text x="96" y="358" class="blueText">DATA &amp; INFRA</text><text x="96" y="398" class="white">PostgreSQL · Docker · AWS</text>
+<rect x="435" y="320" width="330" height="112" rx="18" class="panel"/><text x="461" y="358" class="coralText">HARDWARE</text><text x="461" y="398" class="white">ESP32 · Arduino · Raspberry Pi</text>
+<rect x="800" y="320" width="330" height="112" rx="18" class="panel"/><text x="826" y="358" class="blueText">WORKFLOW</text><text x="826" y="398" class="white">Git · Linux · REST · CI/CD</text>
+</g></svg>

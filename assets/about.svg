@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
+<title id="title">about.svg</title><desc id="desc">An overview of Naveen’s interests in product engineering, educational technology, backend systems and robotics.</desc><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1224"/><stop offset="1" stop-color="#151b34"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+<linearGradient id="coral" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fb7185"/><stop offset="1" stop-color="#f97316"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="22"/></filter>
+</defs>
+<style>
+ text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+ .muted{fill:#aab5ce}.white{fill:#f8fafc}.blueText{fill:#93c5fd}.coralText{fill:#fda4af}
+ .eyebrow{font-size:16px;font-weight:700;letter-spacing:3px}.heading{font-size:42px;font-weight:750;letter-spacing:-1.2px}.body{font-size:20px}.small{font-size:15px}
+ .panel{fill:#ffffff;fill-opacity:.045;stroke:#9db5e8;stroke-opacity:.18;stroke-width:1.4}
+ .float{animation:float 6s ease-in-out infinite}.float2{animation:float 7s ease-in-out infinite reverse}
+ .pulse{animation:pulse 4s ease-in-out infinite;transform-origin:center}
+ @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+ @keyframes pulse{0%,100%{opacity:.45}50%{opacity:.9}}
+ @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="1200" height="410" rx="30" fill="url(#bg)"/>
+<circle cx="1060" cy="80" r="190" fill="#2563eb" opacity=".18" filter="url(#glow)"/>
+<circle cx="80" cy="390" r="150" fill="#f97366" opacity=".10" filter="url(#glow)"/>
+<text x="70" y="82" class="eyebrow coralText">01 / THE BUILDER</text><text x="70" y="140" class="heading white">A little about what I do</text>
+<rect x="70" y="180" width="500" height="160" rx="20" class="panel"/><text x="100" y="225" class="blueText" font-size="22" font-weight="700">PRODUCT ENGINEERING</text><text x="100" y="265" class="muted body">From backend APIs to polished interfaces,</text><text x="100" y="294" class="muted body">I enjoy turning ideas into usable products.</text>
+<rect x="600" y="180" width="530" height="160" rx="20" class="panel"/><text x="630" y="225" class="coralText" font-size="22" font-weight="700">HARDWARE MEETS SOFTWARE</text><text x="630" y="265" class="muted body">Robotics, microcontrollers and connected</text><text x="630" y="294" class="muted body">devices keep me experimenting beyond the screen.</text>
+<text x="72" y="382" class="muted small">INTERESTS  /  EDTECH · BACKEND SYSTEMS · SYSTEM DESIGN · IOT · DEVELOPER TOOLS</text></svg>
