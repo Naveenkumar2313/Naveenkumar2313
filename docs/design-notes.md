@@ -43,3 +43,13 @@
 - **SMIL Superiority**: Native SMIL (`animate`, `animateTransform`, `animateMotion`, and path `d` morphing) passed with 100% fidelity.
 - **Responsive Sizing**: Documented 1200-wide viewBox scaling on 390px mobile screens (0.33x factor). Essential text rule enforced (>= 30 units).
 - **Theme Support**: Verified `<picture>` switching between dark and light SVGs.
+
+
+## Phase 2: Design Tokens & Hero Implementation
+- **Design Tokens (`src/theme.mjs`)**: Implemented complete palette across dark (`#0C0E11` / `#13161B` / `#F5A524`) and light (`#F5F3EE` / `#FBFAF7` / `#B45309`).
+- **Typography Engine (`src/font-outliner.mjs`)**: Fully integrated `opentype.js` converting OFL fonts (*Space Grotesk* for display, *JetBrains Mono* for technical labels) into exact Bézier `<path>` strings with kerning and tracking compensation (-2% display, +8% mono). Font files and licenses checked into `src/fonts/`.
+- **Photo Cutout Pipeline (`src/image-optimizer.mjs`)**: Optimized source photo to WebP data URI (23 KB, well below the 120 KB ceiling). Applied duotone remapping matrix and accent rim lighting in SVG.
+- **Waveform Morphing Engine (`src/waveform-generator.mjs`)**: Built mathematical generator creating 40 cubic Bézier segments with identical coordinate count for all 5 stages (Sine, Distorted, Clipped, Square, Bits).
+- **Master Clock Synchronization**: Synced the 12-second master clock across the 3 role titles (4s each) and the 4 oscilloscope stages (ANALOG, COMPARATOR, DIGITAL, CODE).
+- **Dual Variant Support**: Default photo variant and etched monogram (`NK`) chip variant both generated deterministically via `photo: true|false`.
+- **Payload Verification**: All Hero assets measure ~161 KB (Photo) and ~130 KB (Monogram), comfortably below the 400 KB per-asset budget.

@@ -270,3 +270,4 @@ const svg14 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" wid
 fs.writeFileSync(path.join(outDir, '14-size-800kb.svg'), svg14);
 
 console.log('Render-lab SVG suite generated.');
+

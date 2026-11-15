@@ -1,0 +1,13 @@
+# Font Notice & Attributions
+
+This directory contains Open Font License (OFL) typefaces used by Project SIGNAL build pipeline to render outlined vector glyphs directly into SVG assets:
+
+1. Space Grotesk
+   - Author: Florian Karsten
+   - Source: Google Fonts / https://github.com/floriankarsten/space-grotesk
+   - License: SIL Open Font License, Version 1.1 (see OFL-SpaceGrotesk.txt)
+
+2. JetBrains Mono
+   - Author: JetBrains / Philipp Nurullin, Konstantin Bulenkov
+   - Source: JetBrains / Google Fonts / https://github.com/JetBrains/JetBrainsMono
+   - License: SIL Open Font License, Version 1.1 (see OFL-JetBrainsMono.txt)

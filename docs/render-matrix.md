@@ -43,3 +43,4 @@
 3. **Image Processor:** Node.js `sharp` pipeline for photo resizing, duotone preparation, and WebP base64 encoding (< 120 KB).
 4. **Theme Toggling:** GitHub native `<picture>` tags with `(prefers-color-scheme: dark)` and `(prefers-color-scheme: light)`.
 5. **Cache Control:** Semantic asset versioning (`?v=1`) on all asset URLs.
+

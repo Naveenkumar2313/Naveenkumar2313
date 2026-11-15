@@ -1,0 +1,14 @@
+{
+  "name": "naveenkumar-profile",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Project SIGNAL: GitHub profile README generator for Naveen Kumar K",
+  "scripts": {
+    "build": "node src/build-assets.mjs",
+    "activity": "node src/fetch-activity.mjs"
+  },
+  "dependencies": {
+    "opentype.js": "^1.3.4",
+    "sharp": "^0.33.5"
+  }
+}
