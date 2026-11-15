@@ -1,4 +1,5 @@
 import { renderTextPath } from '../font-outliner.mjs';
+import { escapeXml } from '../utils.mjs';
 
 /**
  * Builds the Selected Work SVG panel (1200 x 820).
@@ -31,7 +32,8 @@ export async function buildSelectedWorkSvg(mode, config, t) {
     const titlePath = renderTextPath(p.title, 'display', 19, cx + 32, cy + 68, { fill: t.text, tracking: -0.01 });
 
     // Long body description uses system font stack per design specification
-    const descText = `<text x="${cx + 32}" y="${cy + 96}" fill="${t.muted}" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.2">${p.description}</text>`;
+    const safeDesc = escapeXml(p.description);
+    const descText = `<text x="${cx + 32}" y="${cy + 96}" fill="${t.muted}" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.2">${safeDesc}</text>`;
 
     // Render tag chips
     const tagElements = [];

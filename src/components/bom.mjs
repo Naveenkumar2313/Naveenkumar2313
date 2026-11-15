@@ -108,8 +108,8 @@ export async function buildBomSvg(mode, config, t) {
     </g>`);
   }
 
-  // Bottom silkscreen info
-  const footerPath = renderTextPath('REV 2025.1 · ALL COMPONENTS TESTED & DEPLOYED IN PRODUCTION', 'mono', 10, 600, 480, { fill: t.muted, tracking: 0.06, anchor: 'middle' });
+  // Footer Silkscreen Notice (body copy uses system font stack)
+  const footerText = '<text x="600" y="480" fill="' + t.muted + '" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" letter-spacing="0.5">REV 2025.1 · ALL COMPONENTS TESTED &amp; DEPLOYED IN PRODUCTION</text>';
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
@@ -126,7 +126,7 @@ export async function buildBomSvg(mode, config, t) {
 
   <!-- Footer Silkscreen Notice -->
   <line x1="72" y1="456" x2="1128" y2="456" stroke="${t.hairline}" stroke-width="1" stroke-dasharray="3 4" />
-  ${footerPath.toSvg()}
+  ${footerText}
 </svg>`;
 }
 

@@ -78,7 +78,7 @@ export async function buildHeroSvg(mode, config, t, snapshotTime = null) {
     const photoDataUri = await getOptimizedCutoutWebP();
     if (photoDataUri) {
       photoElement = `
-      <!-- Photo Cutout with Bottom Anchor & Duotone Accent Treatment -->
+      <!-- Photo Cutout with Bottom Anchor and Duotone Accent Treatment -->
       <g id="hero-photo-group" transform="translate(480, 110)">
         <defs>
           <clipPath id="photoClip">
@@ -154,7 +154,7 @@ export async function buildHeroSvg(mode, config, t, snapshotTime = null) {
   <!-- Subtle instrument frame -->
   <rect x="16" y="16" width="1168" height="528" rx="20" fill="none" stroke="${t.hairline}" stroke-width="1" />
 
-  <!-- ==================== LEFT COLUMN: IDENTITY & ROLES ==================== -->
+  <!-- ==================== LEFT COLUMN: IDENTITY AND ROLES ==================== -->
   <g id="hero-left">
     <!-- Eyebrow -->
     ${eyebrowPath.toSvg()}
@@ -194,7 +194,7 @@ export async function buildHeroSvg(mode, config, t, snapshotTime = null) {
 
     <!-- Status Chip -->
     <g id="status-chip" transform="translate(0, 0)">
-      <rect x="72" y="472" width="372" height="34" rx="8" fill="${t.surface2}" stroke="${t.hairline}" stroke-width="1" />
+      <rect x="72" y="472" width="${statusPath.width + 54}" height="34" rx="8" fill="${t.surface2}" stroke="${t.hairline}" stroke-width="1" />
       <!-- Pulsing Accent Dot -->
       <circle cx="89" cy="489" r="4.5" fill="${t.accent}">
         <animate attributeName="opacity" values="1; 0.3; 1" dur="2s" repeatCount="indefinite" />

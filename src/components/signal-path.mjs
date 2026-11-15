@@ -1,4 +1,5 @@
 import { renderTextPath } from '../font-outliner.mjs';
+import { escapeXml } from '../utils.mjs';
 
 /**
  * Builds the Signal Path SVG panel (1200 x 300).
@@ -36,7 +37,8 @@ export async function buildSignalPathSvg(mode, config, t) {
     const tpPath = renderTextPath(tpName, 'mono', 10, nx, traceY - 24, { fill: t.muted, tracking: 0.08, anchor: 'middle' });
     const stagePath = renderTextPath(n.stage, 'mono', 11, nx, traceY + 44, { fill: t.accent, tracking: 0.08, anchor: 'middle' });
     const titlePath = renderTextPath(n.label, 'display', 17, nx, traceY + 70, { fill: t.text, tracking: -0.01, anchor: 'middle' });
-    const detailText = `<text x="${nx}" y="${traceY + 92}" fill="${t.muted}" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle">${n.detail}</text>`;
+    const safeDetail = escapeXml(n.detail);
+    const detailText = `<text x="${nx}" y="${traceY + 92}" fill="${t.muted}" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle">${safeDetail}</text>`;
 
     // Keyframes for node light-up when pulse arrives
     // Node 0: t ~ 0.8s (8%)
