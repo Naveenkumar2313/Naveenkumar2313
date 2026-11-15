@@ -87,3 +87,13 @@ Component E renders the user's GitHub contribution calendar as a precision oscil
 4. **Failure Resiliency & Offline Fallback**:
    - If the GitHub GraphQL API encounters a rate limit or network error, `src/fetch-activity.mjs` preserves the existing `assets/activity-*.svg` files and exits with code 0.
    - Under no circumstances will an API hiccup break a build or commit corrupted files.
+
+
+## Production Hotfix: XML Entity Escaping & Camo Cache Invalidation
+- **Root Cause Analysis**: The live GitHub render of `path` and `work` failed with broken image placeholders because unescaped ampersands (`&`) in description copy (`"Hardware foundations & circuit theory"`, `"Interactive electronics lab with MNA engine & real-time collaboration."`) caused strict XML parsing failures when GitHub's Camo proxy validated the SVGs.
+- **Resolution**:
+  1. Implemented `src/utils.mjs` (`escapeXml`) to ensure all interpolated copy is sanitized before entering SVG text elements.
+  2. Verified 100% of generated SVGs against Python's strict `xml.etree.ElementTree` parser.
+  3. Corrected status chip padding in the Hero panel.
+  4. Bumped all asset query versions to `?v=2` in `README.md` to force GitHub Camo to flush cached 500 error responses and re-proxy the validated XML.
+  5. Pushed fix directly to `origin/main`.
