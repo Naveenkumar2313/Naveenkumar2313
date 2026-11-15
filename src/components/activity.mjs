@@ -161,3 +161,4 @@ export async function buildActivitySvg(mode, calendarData, t) {
   ${statPods.join('\n\n')}
 </svg>`;
 }
+

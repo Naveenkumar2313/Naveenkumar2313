@@ -129,3 +129,4 @@ export async function buildBomSvg(mode, config, t) {
   ${footerPath.toSvg()}
 </svg>`;
 }
+
