@@ -335,3 +335,4 @@ export async function buildHeroLayoutSvg(mode, config, t, layoutOption = 1) {
   ${photoSection}
 </svg>`;
 }
+
