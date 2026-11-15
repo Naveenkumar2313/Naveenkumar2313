@@ -26,3 +26,4 @@ export const theme = {
     accentBorder: 'rgba(180, 83, 9, 0.35)'
   }
 };
+

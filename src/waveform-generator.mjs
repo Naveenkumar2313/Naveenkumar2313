@@ -77,3 +77,4 @@ export function getAllWaveforms() {
     bits: generateWaveformPath(getBitsY)
   };
 }
+

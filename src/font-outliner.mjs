@@ -53,7 +53,7 @@ export function renderTextPath(text, type, size, x, y, options = {}) {
   for (let i = 0; i < glyphs.length; i++) {
     const glyph = glyphs[i];
     const glyphPath = glyph.getPath(currentX, y, size);
-    const d = glyphPath.toPathData(2);
+    const d = glyphPath.toPathData(1);
     if (d && d.length > 0) {
       pathParts.push(d);
     }
@@ -68,3 +68,4 @@ export function renderTextPath(text, type, size, x, y, options = {}) {
     toSvg: (extraAttrs = '') => `<path d="${combinedD}" fill="${fill}" ${extraAttrs} />`
   };
 }
+

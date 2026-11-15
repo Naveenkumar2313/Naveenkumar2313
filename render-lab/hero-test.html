@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Component Visual Inspection</title>
+  <style>
+    :root {
+      --bg: #0C0E11;
+      --text: #ECEEF1;
+      --border: #262B33;
+    }
+    body.light {
+      --bg: #F5F3EE;
+      --text: #13161B;
+      --border: #D8D3C8;
+    }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .panel {
+      margin-bottom: 32px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 16px;
+    }
+    h2 {
+      font-size: 16px;
+      font-family: monospace;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="dark">
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('theme') === 'light') {
+      document.body.className = 'light';
+    }
+  </script>
+
+  <div class="panel">
+    <h2>1. Hero Dark (Photo Variant - Default)</h2>
+    <img src="../assets/hero-dark.svg" alt="Hero Dark Photo">
+  </div>
+
+  <div class="panel">
+    <h2>2. Hero Light (Photo Variant)</h2>
+    <img src="../assets/hero-light.svg" alt="Hero Light Photo">
+  </div>
+
+  <div class="panel">
+    <h2>3. Hero Dark (Monogram Variant)</h2>
+    <img src="../assets/hero-monogram-dark.svg" alt="Hero Monogram Dark">
+  </div>
+
+  <div class="panel">
+    <h2>4. Hero Light (Monogram Variant)</h2>
+    <img src="../assets/hero-monogram-light.svg" alt="Hero Monogram Light">
+  </div>
+
+  <div class="panel">
+    <h2>5. Animation Timestamps: t = 0s (First Frame / ANALOG / Software Developer)</h2>
+    <img src="../assets/hero-frame-t0-dark.svg" alt="t=0s Frame">
+  </div>
+
+  <div class="panel">
+    <h2>6. Animation Timestamps: t = 3s (COMPARATOR / Clipped / Full-Stack Developer)</h2>
+    <img src="../assets/hero-frame-t3-dark.svg" alt="t=3s Frame">
+  </div>
+
+  <div class="panel">
+    <h2>7. Animation Timestamps: t = 6s (DIGITAL / Square Wave / Full-Stack Developer)</h2>
+    <img src="../assets/hero-frame-t6-dark.svg" alt="t=6s Frame">
+  </div>
+
+  <div class="panel">
+    <h2>8. Animation Timestamps: t = 9s (CODE / Binary Bits / Systems Builder)</h2>
+    <img src="../assets/hero-frame-t9-dark.svg" alt="t=9s Frame">
+  </div>
+</body>
+</html>
+

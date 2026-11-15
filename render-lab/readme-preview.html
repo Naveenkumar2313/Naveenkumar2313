@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README Assembly Preview</title>
+  <style>
+    :root {
+      --bg: #0C0E11;
+      --text: #ECEEF1;
+      --border: #262B33;
+      --link: #F5A524;
+    }
+    body.light {
+      --bg: #F5F3EE;
+      --text: #13161B;
+      --border: #D8D3C8;
+      --link: #B45309;
+    }
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .markdown-body {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    picture, img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 24px;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 13px;
+      font-family: monospace;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: rgba(255, 255, 255, 0.04);
+    }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body class="dark">
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('theme') === 'light') {
+      document.body.className = 'light';
+    }
+  </script>
+
+  <div class="markdown-body">
+    <!-- Hero -->
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../assets/hero-dark.svg?v=1">
+      <source media="(prefers-color-scheme: light)" srcset="../assets/hero-light.svg?v=1">
+      <img alt="Naveen Kumar K Hero" src="../assets/hero-dark.svg?v=1">
+    </picture>
+
+    <!-- Signal Path -->
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../assets/path-dark.svg?v=1">
+      <source media="(prefers-color-scheme: light)" srcset="../assets/path-light.svg?v=1">
+      <img alt="Signal Path" src="../assets/path-dark.svg?v=1">
+    </picture>
+
+    <!-- Selected Work -->
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../assets/work-dark.svg?v=1">
+      <source media="(prefers-color-scheme: light)" srcset="../assets/work-light.svg?v=1">
+      <img alt="Selected Work" src="../assets/work-dark.svg?v=1">
+    </picture>
+
+    <!-- BOM -->
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../assets/bom-dark.svg?v=1">
+      <source media="(prefers-color-scheme: light)" srcset="../assets/bom-light.svg?v=1">
+      <img alt="Bill of Materials" src="../assets/bom-dark.svg?v=1">
+    </picture>
+
+    <!-- Connect -->
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../assets/connect-dark.svg?v=1">
+      <source media="(prefers-color-scheme: light)" srcset="../assets/connect-light.svg?v=1">
+      <img alt="Connect Terminal" src="../assets/connect-dark.svg?v=1">
+    </picture>
+
+    <hr>
+
+    <h3>Verified Channels</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Channel</th>
+          <th>Endpoint</th>
+          <th>Direct Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>GitHub</strong></td>
+          <td><code>github.com/Naveenkumar2313</code></td>
+          <td><a href="https://github.com/Naveenkumar2313">github.com/Naveenkumar2313</a></td>
+        </tr>
+        <tr>
+          <td><strong>LinkedIn</strong></td>
+          <td><code>linkedin.com/in/naveen-kumar-k-426a4a294</code></td>
+          <td><a href="https://www.linkedin.com/in/naveen-kumar-k-426a4a294/">linkedin.com/in/naveen-kumar-k</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="text-align: center; color: #8D95A1; font-size: 11px; margin-top: 24px;">
+      Precision-built with Project SIGNAL pipeline · Last updated 2026-11-15 UTC
+    </div>
+  </div>
+</body>
+</html>
