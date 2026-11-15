@@ -108,14 +108,11 @@ export async function buildBomSvg(mode, config, t) {
     </g>`);
   }
 
-  // Footer Silkscreen Notice (body copy uses system font stack)
-  const footerText = '<text x="600" y="480" fill="' + t.muted + '" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" letter-spacing="0.5">REV 2025.1 · ALL COMPONENTS TESTED &amp; DEPLOYED IN PRODUCTION</text>';
-
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
   <!-- Base Canvas -->
   <rect width="100%" height="100%" fill="${t.bg}" />
-  <rect x="16" y="16" width="1168" height="488" rx="20" fill="none" stroke="${t.hairline}" stroke-width="1" />
+  <rect x="16" y="16" width="1168" height="448" rx="20" fill="none" stroke="${t.hairline}" stroke-width="1" />
 
   <!-- Section Header -->
   ${headerPath.toSvg()}
@@ -123,10 +120,6 @@ export async function buildBomSvg(mode, config, t) {
 
   <!-- 3 BOM Columns -->
   ${groupElements.join('\n\n')}
-
-  <!-- Footer Silkscreen Notice -->
-  <line x1="72" y1="456" x2="1128" y2="456" stroke="${t.hairline}" stroke-width="1" stroke-dasharray="3 4" />
-  ${footerText}
 </svg>`;
 }
 

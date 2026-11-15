@@ -19,20 +19,22 @@ export async function buildConnectSvg(mode, config, t) {
   const resp1Text = `<text x="72" y="134" fill="${t.muted}" font-family="monospace, ui-monospace, SFMono-Regular, Menlo, Consolas" font-size="12">PING collaborate (bengaluru.in): 56 data bytes</text>`;
   const resp2Text = `<text x="72" y="160" fill="${t.muted}" font-family="monospace, ui-monospace, SFMono-Regular, Menlo, Consolas" font-size="12">64 bytes from naveen: icmp_seq=1 ttl=64 time=0.042 ms (STATUS: READY)</text>`;
 
-  // Text-only link tiles for confirmed links (GitHub & LinkedIn)
+  // Text-only link tiles for confirmed links
   const tileY = 196;
   const tileHeight = 44;
 
   // Tile 1: GitHub
+  const ghHref = config.links?.github || 'https://github.com/Naveenkumar2313';
   const ghLabel = renderTextPath('GITHUB //', 'mono', 11, 92, tileY + 28, { fill: t.accent, tracking: 0.08 });
-  const ghVal = renderTextPath('github.com/Naveenkumar2313', 'display', 14, 92 + ghLabel.width + 12, tileY + 27, { fill: t.text, tracking: 0.01 });
-  const ghWidth = 480;
+  const ghVal = renderTextPath(ghHref, 'display', 13, 92 + ghLabel.width + 12, tileY + 27, { fill: t.text, tracking: 0.01 });
+  const ghWidth = 460;
 
-  // Tile 2: LinkedIn
-  const liX = 600;
+  // Tile 2: LinkedIn (exact full URL as requested)
+  const liHref = config.links?.linkedin || 'https://www.linkedin.com/in/naveen-kumar-k-426a4a294/';
+  const liX = 560;
   const liLabel = renderTextPath('LINKEDIN //', 'mono', 11, liX + 20, tileY + 28, { fill: t.accent, tracking: 0.08 });
-  const liVal = renderTextPath('linkedin.com/in/naveen-kumar-k', 'display', 14, liX + 20 + liLabel.width + 12, tileY + 27, { fill: t.text, tracking: 0.01 });
-  const liWidth = 528;
+  const liVal = renderTextPath(liHref, 'display', 12, liX + 20 + liLabel.width + 10, tileY + 27, { fill: t.text, tracking: 0.01 });
+  const liWidth = 568;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280">

@@ -36,7 +36,7 @@
       "id": "node-3",
       "stage": "STAGE 03",
       "label": "Full-Stack Development",
-      "detail": "React, Django, WebSockets, interactive canvas"
+      "detail": "React, Django, WebSockets"
     },
     {
       "id": "node-4",
@@ -47,24 +47,24 @@
   ],
   "bom": {
     "LANGUAGES": [
-      { "ref": "U1", "name": "Python" },
-      { "ref": "U2", "name": "JavaScript" },
-      { "ref": "U3", "name": "TypeScript" },
-      { "ref": "U4", "name": "C/C++" }
+      { "ref": "R1", "name": "Python" },
+      { "ref": "R2", "name": "JavaScript" },
+      { "ref": "R3", "name": "TypeScript" },
+      { "ref": "R4", "name": "C/C++" }
     ],
     "WEB & INTERACTIVE": [
-      { "ref": "U5", "name": "React" },
-      { "ref": "U6", "name": "Django" },
-      { "ref": "U7", "name": "WebSockets" },
-      { "ref": "U8", "name": "Konva" },
-      { "ref": "U9", "name": "Zustand" }
+      { "ref": "C1", "name": "React" },
+      { "ref": "C2", "name": "Django" },
+      { "ref": "C3", "name": "WebSockets" },
+      { "ref": "C4", "name": "Konva" },
+      { "ref": "C5", "name": "Zustand" }
     ],
     "HARDWARE & SYSTEMS": [
-      { "ref": "U10", "name": "ESP32" },
-      { "ref": "U11", "name": "Arduino" },
-      { "ref": "U12", "name": "Raspberry Pi" },
-      { "ref": "U13", "name": "AVR8js emulation" },
-      { "ref": "U14", "name": "Circuit simulation (MNA)" }
+      { "ref": "Q1", "name": "ESP32" },
+      { "ref": "Q2", "name": "Arduino" },
+      { "ref": "Q3", "name": "Raspberry Pi" },
+      { "ref": "Q4", "name": "AVR8js emulation" },
+      { "ref": "Q5", "name": "Circuit simulation (MNA)" }
     ]
   },
   "selectedWork": [
@@ -72,7 +72,7 @@
       "id": "U1",
       "title": "Circuit Simulator",
       "category": "BROWSER EDA",
-      "description": "Interactive electronics lab with MNA engine & real-time collaboration.",
+      "description": "Circuit simulator with MNA engine",
       "tags": ["React", "Django", "Konva", "Zustand"],
       "animation": "rc-curve",
       "url": null
@@ -80,27 +80,27 @@
     {
       "id": "U2",
       "title": "Arduino UNO Simulator",
-      "category": "EMBEDDED EMULATION",
-      "description": "Cycle-accurate AVR runtime with virtual GPIOs and peripheral bus.",
-      "tags": ["AVR8js", "WebAssembly", "TypeScript"],
+      "category": "EMBEDDED SIMULATION",
+      "description": "Arduino UNO simulator with AVR8js",
+      "tags": ["AVR8js", "Arduino"],
       "animation": "led-blink",
       "url": null
     },
     {
       "id": "U3",
       "title": "ESP32 IoT RC Car",
-      "category": "ROBOTICS & IOT",
-      "description": "Telemetry feedback and low-latency motor control over Wi-Fi/BLE.",
-      "tags": ["ESP32", "FreeRTOS", "Motor Control"],
+      "category": "HARDWARE & IOT",
+      "description": "ESP32 IoT remote-controlled car",
+      "tags": ["ESP32", "C++", "IoT"],
       "animation": "radio-arcs",
       "url": null
     },
     {
       "id": "U4",
       "title": "Personal Humanoid Robot",
-      "category": "CUSTOM MECHATRONICS",
-      "description": "Multi-axis servo kinematics and integrated vision/telemetry rig.",
-      "tags": ["Embedded C++", "Kinematics", "Sensors"],
+      "category": "ROBOTICS",
+      "description": "Humanoid robot with Arduino & Python",
+      "tags": ["Arduino", "Python"],
       "animation": "servo-sweep",
       "url": null
     },
@@ -108,8 +108,8 @@
       "id": "U5",
       "title": "Codorythm",
       "category": "LEARNING PLATFORM",
-      "description": "Interactive platform for algorithm tracing and data structure mastery.",
-      "tags": ["DSA", "Interactive Canvas", "Visualization"],
+      "description": "DSA interactive learning platform",
+      "tags": ["DSA", "Full-Stack"],
       "animation": "sorting-bars",
       "url": null
     },
@@ -117,8 +117,8 @@
       "id": "U6",
       "title": "Virtual Labs",
       "category": "SIMULATION PLATFORM",
-      "description": "Zero-install virtual laboratory software for engineering institutions.",
-      "tags": ["Web Lab", "Simulation", "Instruments"],
+      "description": "Virtual laboratory simulation platform",
+      "tags": ["Simulation", "EdTech"],
       "animation": "oscillating-trace",
       "url": null
     }
@@ -129,4 +129,3 @@
     "PyGenicArc exhibition robot"
   ]
 }
-

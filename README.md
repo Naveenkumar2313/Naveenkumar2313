@@ -18,8 +18,23 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/work-dark.svg?v=2">
   <source media="(prefers-color-scheme: light)" srcset="assets/work-light.svg?v=2">
-  <img alt="Selected Work — IC U1: Circuit Simulator (React, Django, Konva, Zustand); U2: Arduino UNO Simulator (AVR8js, TypeScript); U3: ESP32 IoT RC Car; U4: Personal Humanoid Robot; U5: Codorythm; U6: Virtual Labs." src="assets/work-dark.svg?v=2" width="100%">
+  <img alt="Selected Work — IC U1: Circuit Simulator (React, Django, Konva, Zustand); U2: Arduino UNO Simulator (AVR8js); U3: ESP32 IoT RC Car; U4: Personal Humanoid Robot (Arduino, Python); U5: Codorythm; U6: Virtual Labs." src="assets/work-dark.svg?v=2" width="100%">
 </picture>
+
+</div>
+
+### Selected Systems Architecture
+
+| IC | System | Architecture & Implementation |
+| :--- | :--- | :--- |
+| **U1** | **Circuit Simulator** | Interactive browser electronics lab with Modified Nodal Analysis (MNA) solver engine and real-time collaboration. Built with React, Django, Konva, and Zustand. |
+| **U2** | **Arduino UNO Simulator** | Browser-based embedded emulation executing Arduino UNO binaries via AVR8js runtime. |
+| **U3** | **ESP32 IoT RC Car** | IoT remote-controlled vehicle platform engineered with ESP32 and C++. |
+| **U4** | **Personal Humanoid Robot** | Custom personal humanoid robotics platform integrated and controlled with Arduino and Python. |
+| **U5** | **Codorythm** | Interactive platform for data structures and algorithm tracing. |
+| **U6** | **Virtual Labs** | Zero-install simulation platform delivering virtual laboratories for engineering students. |
+
+<div align="center">
 
 <!-- 03: BILL OF MATERIALS -->
 <picture>
@@ -39,20 +54,18 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/connect-dark.svg?v=2">
   <source media="(prefers-color-scheme: light)" srcset="assets/connect-light.svg?v=2">
-  <img alt="Terminal ping --open-to collaborate. Verified channels for Naveen Kumar K." src="assets/connect-dark.svg?v=2" width="100%">
+  <img alt="Terminal ping --open-to collaborate. Direct links for Naveen Kumar K." src="assets/connect-dark.svg?v=2" width="100%">
 </picture>
 
 </div>
 
 ---
 
-### Verified Channels
+### Links
 
-| Channel | Endpoint | Direct Link |
-| :--- | :--- | :--- |
-| **GitHub** | `github.com/Naveenkumar2313` | [github.com/Naveenkumar2313](https://github.com/Naveenkumar2313) |
-| **LinkedIn** | `linkedin.com/in/naveen-kumar-k-426a4a294` | [linkedin.com/in/naveen-kumar-k](https://www.linkedin.com/in/naveen-kumar-k-426a4a294/) |
+- **GitHub:** https://github.com/Naveenkumar2313
+- **LinkedIn:** https://www.linkedin.com/in/naveen-kumar-k-426a4a294/
 
 <div align="center">
-  <sub>Precision-built with Project SIGNAL pipeline · Last updated 2026-11-15 UTC</sub>
+  <sub>Last updated 2026-11-15 UTC</sub>
 </div>
