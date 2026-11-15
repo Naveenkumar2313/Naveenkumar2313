@@ -94,3 +94,4 @@ for (const t of targets) {
 
 server.close();
 console.log('Capture finished cleanly.');
+
