@@ -66,6 +66,8 @@ async function main() {
     'work-light.svg',
     'bom-dark.svg',
     'bom-light.svg',
+    'activity-dark.svg',
+    'activity-light.svg',
     'connect-dark.svg',
     'connect-light.svg'
   ];

@@ -1,0 +1,44 @@
+name: Update Live Activity Trace
+
+on:
+  schedule:
+    # Runs daily at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-activity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch activity and generate trace panel
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: npm run activity
+
+      - name: Commit and push if assets changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if git status --porcelain assets/activity-*.svg | grep -q .; then
+            git add assets/activity-*.svg
+            git commit -m "chore(activity): update live oscilloscope contributions trace [skip ci]"
+            git push
+          else
+            echo "No activity changes detected. Skipping commit."
+          fi

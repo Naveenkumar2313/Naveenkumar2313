@@ -53,3 +53,37 @@
 - **Master Clock Synchronization**: Synced the 12-second master clock across the 3 role titles (4s each) and the 4 oscilloscope stages (ANALOG, COMPARATOR, DIGITAL, CODE).
 - **Dual Variant Support**: Default photo variant and etched monogram (`NK`) chip variant both generated deterministically via `photo: true|false`.
 - **Payload Verification**: All Hero assets measure ~161 KB (Photo) and ~130 KB (Monogram), comfortably below the 400 KB per-asset budget.
+
+
+## Phase 4: Live Activity Trace & GitHub Actions Setup
+
+### Overview
+Component E renders the user's GitHub contribution calendar as a precision oscilloscope trace. The weekly totals become waveform amplitudes along a baseline, the peak week is automatically highlighted, and an API-derived telemetry row reports total contributions, active days, and longest streak with a visible UTC date stamp.
+
+### One-Time Repository Setup Guide
+1. **Enable GitHub Actions Permissions**:
+   - Go to your repository on GitHub: `https://github.com/Naveenkumar2313/Naveenkumar2313/settings/actions`
+   - Under **Workflow permissions**, select **Read and write permissions**.
+   - Check the box **Allow GitHub Actions to create and approve pull requests** (if present).
+   - Click **Save**.
+
+2. **(Optional) Configure Private Contribution Counts via Personal Access Token (PAT)**:
+   - By default, GitHub's built-in `GITHUB_TOKEN` only provides access to *public* contribution counts.
+   - If you want the activity trace to include commits to private repositories:
+     1. Go to `https://github.com/settings/tokens?type=beta` (or classic tokens).
+     2. Create a token with `read:user` and `user:email` scopes (or account activity permissions).
+     3. In your profile repository, navigate to **Settings > Secrets and variables > Actions**.
+     4. Click **New repository secret**.
+     5. Name: `GH_PAT`.
+     6. Secret: Paste your generated personal access token.
+     7. Click **Add secret**.
+   - The workflow `.github/workflows/activity.yml` automatically checks for `GH_PAT` first and falls back to `GITHUB_TOKEN`.
+
+3. **Daily Automation Schedule**:
+   - The cron job is configured to run at `00:00 UTC` every night.
+   - It only commits and pushes if the generated SVG has changed, keeping your git history clean.
+   - You can also manually trigger an instant update at any time from the **Actions** tab by selecting **Update Live Activity Trace** and clicking **Run workflow**.
+
+4. **Failure Resiliency & Offline Fallback**:
+   - If the GitHub GraphQL API encounters a rate limit or network error, `src/fetch-activity.mjs` preserves the existing `assets/activity-*.svg` files and exits with code 0.
+   - Under no circumstances will an API hiccup break a build or commit corrupted files.

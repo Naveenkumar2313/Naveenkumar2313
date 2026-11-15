@@ -28,7 +28,14 @@
   <img alt="Bill of Materials — Languages: Python, JavaScript, TypeScript, C/C++; Web & Interactive: React, Django, WebSockets, Konva, Zustand; Hardware & Systems: ESP32, Arduino, Raspberry Pi, AVR8js emulation, Circuit simulation (MNA)." src="assets/bom-dark.svg?v=1" width="100%">
 </picture>
 
-<!-- 04: CONNECT TERMINAL -->
+<!-- 04: LIVE ACTIVITY TRACE -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg?v=1">
+  <img alt="Live Activity Trace: GitHub contributions calendar rendered as an oscilloscope waveform amplitude trace with real telemetry statistics." src="assets/activity-dark.svg?v=1" width="100%">
+</picture>
+
+<!-- 05: CONNECT TERMINAL -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/connect-dark.svg?v=1">
   <source media="(prefers-color-scheme: light)" srcset="assets/connect-light.svg?v=1">
