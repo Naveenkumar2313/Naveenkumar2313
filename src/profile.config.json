@@ -47,24 +47,66 @@
   ],
   "bom": {
     "LANGUAGES": [
-      { "ref": "R1", "name": "Python" },
-      { "ref": "R2", "name": "JavaScript" },
-      { "ref": "R3", "name": "TypeScript" },
-      { "ref": "R4", "name": "C/C++" }
+      {
+        "ref": "R1",
+        "name": "Python"
+      },
+      {
+        "ref": "R2",
+        "name": "JavaScript"
+      },
+      {
+        "ref": "R3",
+        "name": "TypeScript"
+      },
+      {
+        "ref": "R4",
+        "name": "C/C++"
+      }
     ],
     "WEB & INTERACTIVE": [
-      { "ref": "C1", "name": "React" },
-      { "ref": "C2", "name": "Django" },
-      { "ref": "C3", "name": "WebSockets" },
-      { "ref": "C4", "name": "Konva" },
-      { "ref": "C5", "name": "Zustand" }
+      {
+        "ref": "C1",
+        "name": "React"
+      },
+      {
+        "ref": "C2",
+        "name": "Django"
+      },
+      {
+        "ref": "C3",
+        "name": "WebSockets"
+      },
+      {
+        "ref": "C4",
+        "name": "Konva"
+      },
+      {
+        "ref": "C5",
+        "name": "Zustand"
+      }
     ],
     "HARDWARE & SYSTEMS": [
-      { "ref": "Q1", "name": "ESP32" },
-      { "ref": "Q2", "name": "Arduino" },
-      { "ref": "Q3", "name": "Raspberry Pi" },
-      { "ref": "Q4", "name": "AVR8js emulation" },
-      { "ref": "Q5", "name": "Circuit simulation (MNA)" }
+      {
+        "ref": "Q1",
+        "name": "ESP32"
+      },
+      {
+        "ref": "Q2",
+        "name": "Arduino"
+      },
+      {
+        "ref": "Q3",
+        "name": "Raspberry Pi"
+      },
+      {
+        "ref": "Q4",
+        "name": "AVR8js emulation"
+      },
+      {
+        "ref": "Q5",
+        "name": "Circuit simulation (MNA)"
+      }
     ]
   },
   "selectedWork": [
@@ -73,7 +115,12 @@
       "title": "Circuit Simulator",
       "category": "BROWSER EDA",
       "description": "Circuit simulator with MNA engine",
-      "tags": ["React", "Django", "Konva", "Zustand"],
+      "tags": [
+        "React",
+        "Django",
+        "Konva",
+        "Zustand"
+      ],
       "animation": "rc-curve",
       "url": null
     },
@@ -82,7 +129,10 @@
       "title": "Arduino UNO Simulator",
       "category": "EMBEDDED SIMULATION",
       "description": "Arduino UNO simulator with AVR8js",
-      "tags": ["AVR8js", "Arduino"],
+      "tags": [
+        "AVR8js",
+        "Arduino"
+      ],
       "animation": "led-blink",
       "url": null
     },
@@ -91,7 +141,11 @@
       "title": "ESP32 IoT RC Car",
       "category": "HARDWARE & IOT",
       "description": "ESP32 IoT remote-controlled car",
-      "tags": ["ESP32", "C++", "IoT"],
+      "tags": [
+        "ESP32",
+        "C++",
+        "IoT"
+      ],
       "animation": "radio-arcs",
       "url": null
     },
@@ -99,8 +153,12 @@
       "id": "U4",
       "title": "Personal Humanoid Robot",
       "category": "ROBOTICS",
-      "description": "Humanoid robot with Arduino & Python",
-      "tags": ["Arduino", "Python"],
+      "description": "Humanoid robot with Raspberry pi",
+      "tags": [
+        "Arduino",
+        "Raspberry pi",
+        "Python"
+      ],
       "animation": "servo-sweep",
       "url": null
     },
@@ -109,7 +167,10 @@
       "title": "Codorythm",
       "category": "LEARNING PLATFORM",
       "description": "DSA interactive learning platform",
-      "tags": ["DSA", "Full-Stack"],
+      "tags": [
+        "DSA",
+        "Full-Stack"
+      ],
       "animation": "sorting-bars",
       "url": null
     },
@@ -118,7 +179,10 @@
       "title": "Virtual Labs",
       "category": "SIMULATION PLATFORM",
       "description": "Virtual laboratory simulation platform",
-      "tags": ["Simulation", "EdTech"],
+      "tags": [
+        "Simulation",
+        "EdTech"
+      ],
       "animation": "oscillating-trace",
       "url": null
     }
