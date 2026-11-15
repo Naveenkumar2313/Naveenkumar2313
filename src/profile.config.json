@@ -1,0 +1,131 @@
+{
+  "name": "Naveen Kumar K",
+  "handle": "Naveenkumar2313",
+  "role": "Software Developer",
+  "company": "PyGenicArc",
+  "companyLocation": "Bengaluru, India",
+  "companySince": "Mar 2025",
+  "companyTagline": "Building at PyGenicArc since Mar 2025",
+  "tagline": "Signal to software.",
+  "subTagline": "I make complex systems visible.",
+  "eyebrow": "SOFTWARE DEVELOPER / BENGALURU",
+  "roles": [
+    "Software Developer",
+    "Full-Stack Developer",
+    "Embedded & Interactive Systems Builder"
+  ],
+  "photo": true,
+  "links": {
+    "github": "https://github.com/Naveenkumar2313",
+    "linkedin": "https://www.linkedin.com/in/naveen-kumar-k-426a4a294/"
+  },
+  "signalPath": [
+    {
+      "id": "node-1",
+      "stage": "STAGE 01",
+      "label": "B.E. Electronics & Communication",
+      "detail": "Hardware foundations & circuit theory"
+    },
+    {
+      "id": "node-2",
+      "stage": "STAGE 02",
+      "label": "Hands-On Hardware & Simulators",
+      "detail": "Arduino, ESP32, AVR8js, MNA solver"
+    },
+    {
+      "id": "node-3",
+      "stage": "STAGE 03",
+      "label": "Full-Stack Development",
+      "detail": "React, Django, WebSockets, interactive canvas"
+    },
+    {
+      "id": "node-4",
+      "stage": "STAGE 04",
+      "label": "PyGenicArc (Mar 2025 – Present)",
+      "detail": "EdTech platforms & exhibition systems"
+    }
+  ],
+  "bom": {
+    "LANGUAGES": [
+      { "ref": "U1", "name": "Python" },
+      { "ref": "U2", "name": "JavaScript" },
+      { "ref": "U3", "name": "TypeScript" },
+      { "ref": "U4", "name": "C/C++" }
+    ],
+    "WEB & INTERACTIVE": [
+      { "ref": "U5", "name": "React" },
+      { "ref": "U6", "name": "Django" },
+      { "ref": "U7", "name": "WebSockets" },
+      { "ref": "U8", "name": "Konva" },
+      { "ref": "U9", "name": "Zustand" }
+    ],
+    "HARDWARE & SYSTEMS": [
+      { "ref": "U10", "name": "ESP32" },
+      { "ref": "U11", "name": "Arduino" },
+      { "ref": "U12", "name": "Raspberry Pi" },
+      { "ref": "U13", "name": "AVR8js emulation" },
+      { "ref": "U14", "name": "Circuit simulation (MNA)" }
+    ]
+  },
+  "selectedWork": [
+    {
+      "id": "U1",
+      "title": "Circuit Simulator",
+      "category": "BROWSER EDA",
+      "description": "Interactive electronics lab with MNA engine & real-time collaboration.",
+      "tags": ["React", "Django", "Konva", "Zustand"],
+      "animation": "rc-curve",
+      "url": null
+    },
+    {
+      "id": "U2",
+      "title": "Arduino UNO Simulator",
+      "category": "EMBEDDED EMULATION",
+      "description": "Cycle-accurate AVR runtime with virtual GPIOs and peripheral bus.",
+      "tags": ["AVR8js", "WebAssembly", "TypeScript"],
+      "animation": "led-blink",
+      "url": null
+    },
+    {
+      "id": "U3",
+      "title": "ESP32 IoT RC Car",
+      "category": "ROBOTICS & IOT",
+      "description": "Telemetry feedback and low-latency motor control over Wi-Fi/BLE.",
+      "tags": ["ESP32", "FreeRTOS", "Motor Control"],
+      "animation": "radio-arcs",
+      "url": null
+    },
+    {
+      "id": "U4",
+      "title": "Personal Humanoid Robot",
+      "category": "CUSTOM MECHATRONICS",
+      "description": "Multi-axis servo kinematics and integrated vision/telemetry rig.",
+      "tags": ["Embedded C++", "Kinematics", "Sensors"],
+      "animation": "servo-sweep",
+      "url": null
+    },
+    {
+      "id": "U5",
+      "title": "Codorythm",
+      "category": "LEARNING PLATFORM",
+      "description": "Interactive platform for algorithm tracing and data structure mastery.",
+      "tags": ["DSA", "Interactive Canvas", "Visualization"],
+      "animation": "sorting-bars",
+      "url": null
+    },
+    {
+      "id": "U6",
+      "title": "Virtual Labs",
+      "category": "SIMULATION PLATFORM",
+      "description": "Zero-install virtual laboratory software for engineering institutions.",
+      "tags": ["Web Lab", "Simulation", "Instruments"],
+      "animation": "oscillating-trace",
+      "url": null
+    }
+  ],
+  "additionalShipped": [
+    "Administration Portal",
+    "Automated Marks Attainment System",
+    "PyGenicArc exhibition robot"
+  ]
+}

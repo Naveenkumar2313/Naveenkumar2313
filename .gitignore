@@ -1,0 +1,10 @@
+# antigravity rules
+.agents/rules/profile-readme.md
+
+# Inputs with raw photos and uncommitted personal data
+inputs/
+
+# Node dependencies and build caches
+node_modules/
+dist/
+.cache/
