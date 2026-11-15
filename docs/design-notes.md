@@ -35,3 +35,11 @@
 - **Photo Strategy**: Cutout photo saved as `inputs/naveen-cutout.png`. Configured with `photo: true|false` toggle, defaulting to `true`. High-quality downscaled WebP/PNG embedded in SVG (< 120KB). Monogram `NK` fallback. Raw `inputs/` ignored in git.
 - **BOM Matrix**: Confirmed 3 groups (Languages, Web & Interactive, Hardware & Systems), 4 to 5 entries each.
 - **Selected Work**: 6 IC cards (U1–U6) representing 4 personal systems + 2 generic employer platforms. 3 additional generic employer systems noted below grid. All 4 personal projects currently have `NONE` public repos; will display cleanly without dead link styling.
+
+
+## Phase 1 Findings & Render Matrix Summary
+- **Render Lab Execution**: Created 14 SVG stress fixtures in `render-lab/` and verified with multi-viewport headless Chrome testing.
+- **Webfont Confirmation**: Confirmed `@font-face` is blocked inside `<img>` by browser sandboxes. All display text will be outlined to SVG `<path>` vectors using `opentype.js`.
+- **SMIL Superiority**: Native SMIL (`animate`, `animateTransform`, `animateMotion`, and path `d` morphing) passed with 100% fidelity.
+- **Responsive Sizing**: Documented 1200-wide viewBox scaling on 390px mobile screens (0.33x factor). Essential text rule enforced (>= 30 units).
+- **Theme Support**: Verified `<picture>` switching between dark and light SVGs.

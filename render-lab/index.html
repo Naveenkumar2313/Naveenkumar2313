@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Render Lab — Camo Feature Test Bench</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg-color: #0C0E11;
+      --text-color: #ECEEF1;
+      --border-color: #262B33;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-color: #F5F3EE;
+        --text-color: #13161B;
+        --border-color: #D8D3C8;
+      }
+    }
+    body.dark-mode {
+      background-color: #0C0E11;
+      color: #ECEEF1;
+      --border-color: #262B33;
+    }
+    body.light-mode {
+      background-color: #F5F3EE;
+      color: #13161B;
+      --border-color: #D8D3C8;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 32px 24px;
+      line-height: 1.5;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.2s, color 0.2s;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .test-case {
+      margin-bottom: 32px;
+      padding: 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+    .test-case h3 {
+      margin-top: 0;
+      font-size: 16px;
+      font-family: monospace;
+      margin-bottom: 12px;
+    }
+    img, picture {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    .theme-controls {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 12px;
+      border-radius: 6px;
+      z-index: 100;
+      display: flex;
+      gap: 8px;
+    }
+    button {
+      padding: 6px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      border: 1px solid #555;
+      background: #222;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('theme') === 'light') {
+      document.body.className = 'light-mode';
+    } else if (params.get('theme') === 'dark') {
+      document.body.className = 'dark-mode';
+    }
+  </script>
+  <div class="theme-controls">
+    <button onclick="document.body.className='dark-mode'">Dark</button>
+    <button onclick="document.body.className='light-mode'">Light</button>
+  </div>
+  <div class="container">
+    <h1>Project SIGNAL — Render Lab Test Bench</h1>
+    <p>Testing GitHub camo &amp; browser capabilities with standalone SVG images.</p>
+
+    <div class="test-case" id="t01">
+      <h3>01. SMIL Opacity and Transform</h3>
+      <img src="01-smil-opacity-transform.svg" alt="01 SMIL">
+    </div>
+
+    <div class="test-case" id="t02">
+      <h3>02. SMIL animateMotion</h3>
+      <img src="02-animate-motion.svg" alt="02 AnimateMotion">
+    </div>
+
+    <div class="test-case" id="t03">
+      <h3>03. SMIL Path d-Attribute Morph</h3>
+      <img src="03-path-morph.svg" alt="03 Morph">
+    </div>
+
+    <div class="test-case" id="t04">
+      <h3>04. CSS Keyframes in Style Block</h3>
+      <img src="04-css-keyframes.svg" alt="04 CSS Keyframes">
+    </div>
+
+    <div class="test-case" id="t05">
+      <h3>05. @font-face Data-URI WOFF2</h3>
+      <img src="05-font-face-woff2.svg" alt="05 Font Face">
+    </div>
+
+    <div class="test-case" id="t06">
+      <h3>06. Embedded Raster (PNG and WebP)</h3>
+      <img src="06-embedded-png-webp.svg" alt="06 Embedded Raster">
+    </div>
+
+    <div class="test-case" id="t07">
+      <h3>07. Filters (feGaussianBlur and feColorMatrix)</h3>
+      <img src="07-filters-blur-matrix.svg" alt="07 Filters">
+    </div>
+
+    <div class="test-case" id="t08">
+      <h3>08. clipPath and mask</h3>
+      <img src="08-mask-clippath.svg" alt="08 Mask Clip">
+    </div>
+
+    <div class="test-case" id="t09">
+      <h3>09. Dark/Light Theme Switching via &lt;picture&gt;</h3>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="09-dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="09-light.svg">
+        <img alt="Theme Switching Test" src="09-dark.svg">
+      </picture>
+    </div>
+
+    <div class="test-case" id="t10">
+      <h3>10. prefers-reduced-motion</h3>
+      <img src="10-reduced-motion.svg" alt="10 Reduced Motion">
+    </div>
+
+    <div class="test-case" id="t11">
+      <h3>11. Cache Busting (?v=N)</h3>
+      <img src="11-cache-bust-v.svg?v=1" alt="11 Cache Bust">
+    </div>
+
+    <div class="test-case" id="t12">
+      <h3>12. Outlined Vector Text</h3>
+      <img src="12-outlined-text.svg" alt="12 Outlined Text">
+    </div>
+
+    <div class="test-case" id="t13">
+      <h3>13. File Size: 300 KB</h3>
+      <img src="13-size-300kb.svg" alt="13 Size 300KB">
+    </div>
+
+    <div class="test-case" id="t14">
+      <h3>14. File Size: 800 KB</h3>
+      <img src="14-size-800kb.svg" alt="14 Size 800KB">
+    </div>
+  </div>
+</body>
+</html>
+
